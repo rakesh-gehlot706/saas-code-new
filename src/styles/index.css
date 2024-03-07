@@ -1,15 +1,17 @@
-@import "components.css";
+/* @import "components.css"; */
 
 @tailwind base;
+
 
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
 
+
 body {
     text-rendering: geometricPrecision;
 
-    @apply bg-white text-gray-800 dark:bg-black-500 dark:text-gray-300 font-sans antialiased;
+    /* @apply bg-white text-gray-800 dark:bg-black-500 dark:text-gray-300 font-sans antialiased; */
 }
 
 .hero-image-shadow {

@@ -27,6 +27,8 @@ import { UserSession } from '~/core/session/types/user-session';
 import { SidebarContext } from '~/core/contexts/sidebar';
 import { ThemeContext } from '~/core/contexts/theme';
 import { CsrfTokenContext } from '~/core/contexts/csrf-token';
+import { Provider } from 'react-redux';
+import store from 'store';
 
 const AppRouteLoadingIndicator = dynamic(
   () => import('~/core/ui/AppRouteLoadingIndicator'),
@@ -99,6 +101,7 @@ function App(
   useEffect(updateCurrentUser, [updateCurrentUser]);
 
   return (
+  <Provider store={store}>
     <FirebaseAppShell config={firebase}>
       <FirebaseAppCheckProvider>
         <FirebaseAuthProvider
@@ -127,6 +130,7 @@ function App(
         </FirebaseAuthProvider>
       </FirebaseAppCheckProvider>
     </FirebaseAppShell>
+    </Provider>
   );
 }
 

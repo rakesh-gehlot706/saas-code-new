@@ -21,6 +21,7 @@ const Layout: React.FCC = ({ children }) => {
   return (
     <>
       <Head>
+
         <title key={'title'}>{configuration.site.name}</title>
 
         <link rel="shortcut icon" href="/assets/images/favicon/favicon.ico" />
@@ -97,6 +98,7 @@ const Layout: React.FCC = ({ children }) => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        
       </Head>
 
       <main>{children}</main>

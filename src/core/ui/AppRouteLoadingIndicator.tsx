@@ -1,5 +1,6 @@
-import { createRef, useCallback, useEffect, useState } from 'react';
+// import { createRef, useCallback, useEffect, useState } from 'react';
 import Router from 'next/router';
+import { createRef, useCallback, useEffect, useState } from 'react';
 import LoadingBar, { LoadingBarRef } from 'react-top-loading-bar';
 
 function AppRouteLoadingIndicator() {
