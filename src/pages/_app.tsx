@@ -1,10 +1,10 @@
-import '../styles/index.css'; 
+import '../styles/index.css';
 
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import type { AppProps } from 'next/app';
 import dynamic from 'next/dynamic';
 import { Inter as SansFont, Manrope as HeadingFont } from 'next/font/google';
-import store from 'src/store';
+
 import type { User as AuthUser } from 'firebase/auth';
 import { appWithTranslation, SSRConfig } from 'next-i18next';
 
@@ -27,7 +27,6 @@ import { UserSession } from '~/core/session/types/user-session';
 import { SidebarContext } from '~/core/contexts/sidebar';
 import { ThemeContext } from '~/core/contexts/theme';
 import { CsrfTokenContext } from '~/core/contexts/csrf-token';
-import { Provider } from 'react-redux';
 
 const AppRouteLoadingIndicator = dynamic(
   () => import('~/core/ui/AppRouteLoadingIndicator'),
@@ -148,12 +147,11 @@ function UiStateProvider(
   const [theme, setTheme] = useState(currentTheme);
 
   return (
-   <Provider store={store}> <SidebarContext.Provider value={{ collapsed, setCollapsed }}>
-   <ThemeContext.Provider value={{ theme, setTheme }}>
-     {props.children}
-   </ThemeContext.Provider>
- </SidebarContext.Provider>
-   </Provider>
+    <SidebarContext.Provider value={{ collapsed, setCollapsed }}>
+      <ThemeContext.Provider value={{ theme, setTheme }}>
+        {props.children}
+      </ThemeContext.Provider>
+    </SidebarContext.Provider>
   );
 }
 
