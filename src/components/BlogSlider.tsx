@@ -42,7 +42,7 @@ const BlogSlider = ({
     const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
 
     return (
-        <section className={`py-14 lg:py-[100px] ${className}`}>
+        <section className={`py-14 lg:py-[100px] bg-gradient-to-l from-red-50 ${className}`}>
             <div className="container">
                 <div className={`flex flex-col items-center justify-center lg:flex-row lg:justify-between ${title1.length > 0 ? '' : 'mb-10'}`}>
                     <div className={`heading text-center ltr:lg:text-left rtl:lg:text-right ${title1.length > 0 ? '' : 'mb-0'}`}>

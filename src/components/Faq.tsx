@@ -40,7 +40,7 @@ const Faq = ({
 }) => {                             
     const [active, setActive] = useState<any>(0);
     return (
-        <section className="py-14 lg:py-[100px]">
+        <section className="py-14 lg:py-[100px] bg-gradient-to-l from-blue-50">
             <div className="container">
                 <div className="heading text-center">
                     <h6 className={`${showTitle ? '' : 'hidden'} ${type.toLowerCase() === 'modern-saas' ? '!text-secondary' : ''}`}>FAQs</h6>

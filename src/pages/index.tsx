@@ -494,14 +494,14 @@ const ModernSaas = () => {
                     </div>
                 </section>
 
-                <section className="py-14 dark:bg-gray-dark lg:py-[100px]">
+                <section className="py-14 dark:bg-gray-dark lg:py-[100px] bg-gradient-to-l from-red-50 ">
                     <h3 className="mb-10 text-center text-2xl font-bold text-black dark:text-white lg:mb-14">
                         Used and <span className="text-secondary">loved</span> by industry leaders
                     </h3>
                     <LogoSlider />
                 </section>
 
-                <section className="bg-gradient-to-b from-white/[55%] to-transparent py-14 dark:bg-none lg:py-20">
+                <section className=" to-transparent py-14 dark:bg-none lg:py-20 bg-gradient-to-l from-blue-50 ">
                     <div className="container">
                         <div className="lg:w-1/2">
                             <div className="heading mb-5 text-center ltr:lg:text-left rtl:lg:text-right">
@@ -676,7 +676,7 @@ const ModernSaas = () => {
                     </div>
                 </section>
 
-                <section className="bg-gradient-to-t from-white/[55%] to-transparent py-8 dark:bg-white/[0.03] dark:bg-none lg:py-20 px-5">
+                <section className=" to-transparent py-8 dark:bg-white/[0.03] dark:bg-none lg:py-20 px-5 bg-gradient-to-l from-red-50">
                     <div className="relative mx-auto max-w-[1440px] bg-black pt-14 rounded-[32px]">
                         <img src="/assets/images/modern-saas/perfomance-design.svg" alt="" className="absolute bottom-0 ltr:right-0 rtl:left-0" />
                         <img src="/assets/images/modern-saas/dollers-icon.svg" alt="" className="absolute top-0 ltr:right-14 rtl:left-14" />
@@ -748,7 +748,7 @@ const ModernSaas = () => {
                     </div>
                 </section>
 
-                <section className="py-14 dark:bg-gradient-to-t dark:from-white/[0.02] dark:to-transparent lg:py-20">
+                <section className="py-14 dark:bg-gradient-to-t dark:from-white/[0.02] dark:to-transparent lg:py-20 bg-gradient-to-l from-blue-50">
                     <div className="container">
                         <div className="relative">
                             <div className="lg:w-2/3">
@@ -792,7 +792,7 @@ const ModernSaas = () => {
                     </div>
                 </section>
 
-                <section className="py-14 lg:py-20">
+                <section className="py-14 lg:py-20 bg-gradient-to-l from-blue-50">
                     <div className="container">
                         <div className="relative grid items-center gap-y-10 lg:grid-cols-2 lg:gap-4">
                             <img
@@ -903,7 +903,7 @@ const ModernSaas = () => {
                     </div>
                 </section>
 
-                <section className="py-14 text-center lg:py-20">
+                <section className="py-14 text-center lg:py-20 bg-gradient-to-l from-red-50">
                     <div className="container">
                         <div className="heading mb-12 lg:mb-20">
                             <h6 className="!text-secondary">Our Services</h6>
@@ -952,7 +952,7 @@ const ModernSaas = () => {
                     </div>
                 </section>
 
-                <section className="py-[60px] dark:bg-gray-dark px-5">
+                <section className="py-[60px] dark:bg-gray-dark px-5 ">
                     <Testimonial
                         className="mx-auto max-w-[1440px] py-14 dark:!bg-black md:py-20 rounded-[32px]"
                         showTitle={true}
@@ -982,7 +982,7 @@ const ModernSaas = () => {
                                     Email Newsletter
                                     <img src="/assets/images/modern-saas/icon-2.svg" alt="" className="absolute right-8 -bottom-5" />
                                 </h2>
-                                <p className="text-2xl font-semibold">get updates & more</p>
+                                <p className="text-2xl font-semibold text-gray">get updates & more</p>
                                 <form className="relative mt-14">
                                     <div className="absolute top-1/2 -translate-y-1/2 ltr:pl-4 rtl:pr-4">
                                         <svg width="25" height="21" viewBox="0 0 25 21" fill="none" xmlns="http://www.w3.org/2000/svg">
