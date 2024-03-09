@@ -494,6 +494,10 @@ const ModernSaas = () => {
                     </div>
                 </section>
 
+
+
+                
+
                 <section className="py-14 dark:bg-gray-dark lg:py-[100px] bg-gradient-to-l from-red-50 ">
                     <h3 className="mb-10 text-center text-2xl font-bold text-black dark:text-white lg:mb-14">
                         Used and <span className="text-secondary">loved</span> by industry leaders
