@@ -1,317 +1,13 @@
-// import Image from 'next/image';
-// import type { GetStaticPropsContext } from 'next';
-
-// import {
-//   UserGroupIcon,
-//   FireIcon,
-//   UserIcon,
-//   BuildingLibraryIcon,
-//   CubeIcon,
-//   PaintBrushIcon,
-//   DocumentIcon,
-//   ChevronRightIcon,
-// } from '@heroicons/react/24/outline';
-
-// import { withTranslationProps } from '~/lib/props/with-translation-props';
-
-// import Layout from '~/core/ui/Layout';
-// import Container from '~/core/ui/Container';
-// import Footer from '~/components/Footer';
-// import SiteHeader from '~/components/SiteHeader';
-// import SubHeading from '~/core/ui/SubHeading';
-// import Button from '~/core/ui/Button';
-// import Heading from '~/core/ui/Heading';
-// import Hero from '~/core/ui/Hero';
-// import Divider from '~/core/ui/Divider';
-// import SlideUpTransition from '~/core/ui/SlideUpTransition';
-
-// const Index = () => {
-//   return (
-//     <Layout>
-//       <SiteHeader />
-
-//       <Container>
-//         <SlideUpTransition>
-//           <div
-//             className={
-//               'my-12 flex flex-col items-center md:flex-row lg:my-24' +
-//               ' mx-auto flex-1 justify-center'
-//             }
-//           >
-//             <div
-//               className={'flex w-full flex-1 flex-col items-center space-y-10'}
-//             >
-//               <Button variant={'flat'} size={'small'} round>
-//                 <span className={'flex items-center space-x-2 font-normal'}>
-//                   <span>Explore our leading solution</span>
-
-//                   <ChevronRightIcon className={'h-3'} />
-//                 </span>
-//               </Button>
-
-//               <HeroTitle>
-//                 <span>Tell your visitors why</span>
-
-//                 <span
-//                   className={
-//                     'bg-gradient-to-br bg-clip-text text-transparent' +
-//                     ' from-primary-500 to-primary-400' +
-//                     ' to-primary-400 leading-[1.2]'
-//                   }
-//                 >
-//                   your SaaS is awesome
-//                 </span>
-//               </HeroTitle>
-
-//               <div
-//                 className={
-//                   'text-center text-gray-500 dark:text-gray-400' +
-//                   ' flex max-w-lg flex-col space-y-1 font-heading md:w-full'
-//                 }
-//               >
-//                 <span>Here you can write a short description of your SaaS</span>
-
-//                 <span>
-//                   This subheading is usually laid out on multiple lines
-//                 </span>
-
-//                 <span>Impress your customers, straight to the point.</span>
-//               </div>
-
-//               <div className={'flex items-center space-x-4'}>
-//                 <Button round href={'/auth/sign-up'}>
-//                   <span className={'flex items-center space-x-2'}>
-//                     <span>Get Started</span>
-//                     <ChevronRightIcon className={'h-3'} />
-//                   </span>
-//                 </Button>
-
-//                 <Button round color={'secondary'} href={'/pricing'}>
-//                   <span className={'flex items-center space-x-2'}>
-//                     <span>View Pricing</span>
-//                   </span>
-//                 </Button>
-//               </div>
-//             </div>
-//           </div>
-
-//           <div className={'flex justify-center py-12'}>
-//             <Image
-//               priority
-//               className={
-//                 'hero-image-shadow rounded-2xl' +
-//                 ' shadow-primary-500/40 dark:shadow-primary-500/30'
-//               }
-//               width={2688}
-//               height={1824}
-//               src={`/assets/images/dashboard-dark.webp`}
-//               alt={`App Image`}
-//             />
-//           </div>
-//         </SlideUpTransition>
-//       </Container>
-
-//       <Divider />
-
-//       <Container>
-//         <div
-//           className={
-//             'flex flex-col items-center justify-center space-y-24 py-12'
-//           }
-//         >
-//           <div
-//             className={
-//               'flex max-w-3xl flex-col items-center space-y-4 text-center'
-//             }
-//           >
-//             <div className={'flex flex-col items-center space-y-2'}>
-//               <div>
-//                 <FireIcon className={'h-6 text-primary-500'} />
-//               </div>
-
-//               <b className={'text-primary-500'}>Features</b>
-//             </div>
-
-//             <Hero>The best tool in the space</Hero>
-
-//             <SubHeading>
-//               Unbeatable Features and Benefits for Your SaaS Business
-//             </SubHeading>
-//           </div>
-
-//           <div>
-//             <div className={'grid gap-12 lg:grid-cols-3'}>
-//               <div className={'flex flex-col space-y-3 text-center'}>
-//                 <FeatureIcon>
-//                   <UserIcon className={'h-6'} />
-//                 </FeatureIcon>
-
-//                 <Heading type={3}>Authentication</Heading>
-
-//                 <div className={'text-gray-500 dark:text-gray-400'}>
-//                   Secure and Easy-to-Use Authentication for Your SaaS Website
-//                 </div>
-//               </div>
-
-//               <div className={'flex flex-col space-y-3 text-center'}>
-//                 <FeatureIcon>
-//                   <BuildingLibraryIcon className={'h-6'} />
-//                 </FeatureIcon>
-
-//                 <Heading type={3}>Multi-Tenancy</Heading>
-
-//                 <div className={'text-gray-500 dark:text-gray-400'}>
-//                   Powerful Multi-Tenancy Features for Maximum Flexibility and
-//                   Efficiency
-//                 </div>
-//               </div>
-
-//               <div className={'flex flex-col space-y-3 text-center'}>
-//                 <FeatureIcon>
-//                   <UserGroupIcon className={'h-6'} />
-//                 </FeatureIcon>
-
-//                 <Heading type={3}>Team-Management</Heading>
-
-//                 <div className={'text-gray-500 dark:text-gray-400'}>
-//                   Effortlessly Manage and Organize Your Team Members
-//                 </div>
-//               </div>
-
-//               <div className={'flex flex-col space-y-3 text-center'}>
-//                 <FeatureIcon>
-//                   <PaintBrushIcon className={'h-6'} />
-//                 </FeatureIcon>
-
-//                 <Heading type={3}>UI Themes</Heading>
-
-//                 <div className={'text-gray-500 dark:text-gray-400'}>
-//                   Customizable UI Themes to Match Your Brand and Style
-//                 </div>
-//               </div>
-
-//               <div className={'flex flex-col space-y-3 text-center'}>
-//                 <FeatureIcon>
-//                   <CubeIcon className={'h-6'} />
-//                 </FeatureIcon>
-
-//                 <Heading type={3}>UI Components</Heading>
-
-//                 <div className={'text-gray-500 dark:text-gray-400'}>
-//                   Pre-built UI Components to Speed Up Your Development
-//                 </div>
-//               </div>
-
-//               <div className={'flex flex-col space-y-3 text-center'}>
-//                 <FeatureIcon>
-//                   <DocumentIcon className={'h-6'} />
-//                 </FeatureIcon>
-
-//                 <Heading type={3}>Blog and Documentation</Heading>
-
-//                 <div className={'text-gray-500 dark:text-gray-400'}>
-//                   Pre-built Blog and Documentation Pages to Help Your Users
-//                 </div>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </Container>
-
-//       <Divider />
-
-//       <Container>
-//         <div className={'py-12'}>
-//           <div
-//             className={
-//               'flex flex-col justify-between rounded-lg lg:flex-row' +
-//               ' space-y-4 bg-primary-50 px-8 py-10 dark:bg-primary-500/5' +
-//               ' lg:space-y-0'
-//             }
-//           >
-//             <div className={'flex flex-col justify-between space-y-2'}>
-//               <Heading type={3}>
-//                 <p className={'text-gray-800 dark:text-white'}>
-//                   The application you were waiting for.
-//                 </p>
-//               </Heading>
-
-//               <Heading type={4}>
-//                 <p className={'text-primary-500'}>Sign up for free, today.</p>
-//               </Heading>
-//             </div>
-
-//             <div className={'flex flex-col justify-end space-y-2'}>
-//               <div>
-//                 <Button
-//                   className={'w-full lg:w-auto'}
-//                   size={'large'}
-//                   href={'/auth/sign-up'}
-//                 >
-//                   Get Started
-//                 </Button>
-//               </div>
-
-//               <div className="flex flex-col space-y-2 text-center">
-//                 <span className={'text-xs'}>No credit-card required</span>
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       </Container>
-
-//       <Divider />
-
-//       <Footer />
-//     </Layout>
-//   );
-// };
-
-// export default Index;
-
-// export async function getStaticProps({ locale }: GetStaticPropsContext) {
-//   const { props } = await withTranslationProps({ locale });
-
-//   return {
-//     props,
-//   };
-// }
-
-// function HeroTitle({ children }: React.PropsWithChildren) {
-//   return (
-//     <h1
-//       className={
-//         'text-center text-4xl text-black-500 dark:text-white md:text-5xl' +
-//         ' flex flex-col space-y-1 font-heading font-medium xl:text-7xl'
-//       }
-//     >
-//       {children}
-//     </h1>
-//   );
-// }
-
-// function FeatureIcon(props: React.PropsWithChildren) {
-//   return (
-//     <div className={'flex justify-center'}>
-//       <div
-//         className={'rounded-xl bg-primary-500/10 p-4 dark:bg-primary-500/10'}
-//       >
-//         {props.children}
-//       </div>
-//     </div>
-//   );
-// }
-
-
 import Link from 'next/link';
 import Head from 'next/head';
 import { useSelector } from 'react-redux';
-// import { IRootState } from '../';
 import BlogSlider from '../components/BlogSlider';
 import Faq from '../components/Faq';
 import LogoSlider from '../components/LogoSlider';
 import Testimonial from '../components/Testimonial';
 import { IRootState } from 'store';
+import Image from 'next/image';
+// import { FaCloudUploadAlt } from "react-icons/fa";
 
 const ModernSaas = () => {
     const isRtl = useSelector((state: IRootState) => state.themeConfig.direction) === 'rtl' ? true : false;
@@ -362,7 +58,7 @@ const ModernSaas = () => {
     const blogs = [
         {
             id: 1,
-            thumbnail: '/assets/images/modern-saas/design.png',
+            thumbnail: '/assets/images/modern-saas/marketingdemo1.png',
             title: '3 experiments to improve your mobile app funnel',
             excerpt: 'Funnels don’t just provide you with conversion numbers, they provide you with insight into how your users behave.',
             description: '',
@@ -371,7 +67,7 @@ const ModernSaas = () => {
         },
         {
             id: 2,
-            thumbnail: '/assets/images/modern-saas/marketing.png',
+            thumbnail: '/assets/images/modern-saas/marketingdemo2.png',
             title: 'What’s growth hacking? 8 great books to learn more about it',
             excerpt: 'The use of resource-light and cost-effective digital marketing tactics to help grow and retain an active user base, sell products and...',
             description: '',
@@ -380,7 +76,25 @@ const ModernSaas = () => {
         },
         {
             id: 3,
-            thumbnail: '/assets/images/modern-saas/integration.png',
+            thumbnail: '/assets/images/modern-saas/marketingdemo3.png',
+            title: '6 new interesting mobile apps to grow your audience on',
+            excerpt: 'Before I get into the advice, here’s a bit about my background and experience with growing audiences for creative work.',
+            description: '',
+            date: 'Nov 06, 2022',
+            tag: 'Integration',
+        },
+        {
+            id: 4,
+            thumbnail: '/assets/images/modern-saas/marketingdemo4.png',
+            title: '6 new interesting mobile apps to grow your audience on',
+            excerpt: 'Before I get into the advice, here’s a bit about my background and experience with growing audiences for creative work.',
+            description: '',
+            date: 'Nov 06, 2022',
+            tag: 'Integration',
+        },
+        {
+            id: 5,
+            thumbnail: '/assets/images/modern-saas/marketingdemo5.png',
             title: '6 new interesting mobile apps to grow your audience on',
             excerpt: 'Before I get into the advice, here’s a bit about my background and experience with growing audiences for creative work.',
             description: '',
@@ -472,23 +186,29 @@ const ModernSaas = () => {
                                         <b>4.9 / 5 </b>ratings
                                     </span>
                                 </div>
-                                <h2 className="text-3xl font-extrabold leading-normal sm:text-5xl lg:text-[70px] lg:leading-[90px]">
-                                    <span className="text-secondary">Your website, </span>
-                                    <span className="text-primary">growth reimagined</span>
+                                <h2 className="text-3xl font-bold leading-normal sm:text-5xl lg:text-[70px] lg:leading-[90px]">
+                                    <span className="text-secondary">Instantly Convert Bank statement </span>
+                                    <span className="text-primary">From PDF to Excel</span>
+                                    <span className="text-secondary"> Simple & Secure </span>
                                 </h2>
                                 <p className="my-8 text-lg lg:w-3/4">
-                                    Plurk is fully equipped with everything you need to build a high performing website for your SaaS.
+                                    manual data entry goodbye thanks to our leading bank statement conversion tool. It’s fast, secure, and simple to use. The bank statement converter that’s won the world’s heart!
                                 </p>
-                                <Link href="" className="btn mx-auto mt-2 block w-fit bg-white lg:mx-0 lg:rtl:ml-auto">
+                                {/* <Link href="" className="btn mx-auto mt-2 block w-fit bg-white lg:mx-0 lg:rtl:ml-auto">
                                     Free trial
-                                </Link>
+                                </Link> */}
+                                <label htmlFor="fileInput" className="btn mx-auto mt-2 block w-fit bg-white lg:mx-0 lg:rtl:ml-auto">
+                                {/* <FaCloudUploadAlt /> */}
+                                    Upload Your PDF file here
+                                    <input type="file" id="fileInput" style={{ display: "none" }} />
+                                </label>
                             </div>
                             <div
                                 className="top-[70px] w-full pb-7 ltr:right-0 rtl:left-0 rtl:right-auto lg:absolute lg:max-w-[630px] lg:pb-0 xl:ltr:-right-52 xl:rtl:-left-52"
                                 data-aos={isRtl ? 'fade-right' : 'fade-left'}
                                 data-aos-duration="1000"
                             >
-                                <img src="/assets/images/modern-saas/banner-img.png" alt=""/>
+                                <Image className=' mt-16 w-[580px] h-[620px] ' width={630} height={600} src="/assets/images/modern-saas/banner1.png" alt="" />
                             </div>
                         </div>
                     </div>
@@ -496,7 +216,7 @@ const ModernSaas = () => {
 
 
 
-                
+
 
                 <section className="py-14 dark:bg-gray-dark lg:py-[100px] bg-gradient-to-l from-red-50 ">
                     <h3 className="mb-10 text-center text-2xl font-bold text-black dark:text-white lg:mb-14">
@@ -682,17 +402,17 @@ const ModernSaas = () => {
 
                 <section className=" to-transparent py-8 dark:bg-white/[0.03] dark:bg-none lg:py-20 px-5 bg-gradient-to-l from-red-50">
                     <div className="relative mx-auto max-w-[1440px] bg-black pt-14 rounded-[32px]">
-                        <img src="/assets/images/modern-saas/perfomance-design.svg" alt="" className="absolute bottom-0 ltr:right-0 rtl:left-0" />
-                        <img src="/assets/images/modern-saas/dollers-icon.svg" alt="" className="absolute top-0 ltr:right-14 rtl:left-14" />
+                        <Image width={435} height={270} src="/assets/images/modern-saas/perfomance-design.svg" alt="" className="absolute bottom-0 ltr:right-0 rtl:left-0" />
+                        <Image width={300} height={149} src="/assets/images/modern-saas/dollers-icon.svg" alt="" className="absolute top-0 ltr:right-14 rtl:left-14" />
                         <div className="container">
                             <div className="relative">
-                                <img src="/assets/images/modern-saas/perfomance-doller-icon.svg" alt="" className="absolute bottom-0 ltr:left-0 rtl:right-0" />
+                                <Image width={135} height={140} src="/assets/images/modern-saas/perfomance-doller-icon.svg" alt="" className="absolute bottom-0 ltr:left-0 rtl:right-0" />
                                 <div className="grid gap-4 lg:grid-cols-2">
                                     <div className="pt-28 lg:pb-10 lg:pt-0">
                                         <div className="heading mb-12 ltr:lg:text-left rtl:lg:text-right">
                                             <h6 className="!text-secondary">WHAT WE DO</h6>
                                             <h4 className="pb-4 leading-normal !text-white lg:!leading-[50px]">Increase your performance</h4>
-                                            <p className="text-lg font-semibold xl:w-11/12">
+                                            <p className="text-lg font-semibold xl:w-11/12 text-white">
                                                 We take step wise for your every platform. We helping to client with our talented expert.
                                             </p>
                                         </div>
@@ -744,7 +464,7 @@ const ModernSaas = () => {
                                         </ul>
                                     </div>
                                     <div className="pb-20 lg:pt-20 lg:pb-8" data-aos="fade-up" data-aos-duration="1000">
-                                        <img src="/assets/images/modern-saas/perfomance-img.png" alt="" className="w-full" />
+                                        <Image width={547} height={501} src="/assets/images/modern-saas/banner2.png" alt="" className="w-full" />
                                     </div>
                                 </div>
                             </div>
@@ -767,7 +487,7 @@ const ModernSaas = () => {
                                 <ul className="mt-14 space-y-14 lg:w-2/3">
                                     <li className="flex gap-5 sm:gap-8">
                                         <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-primary p-2 sm:h-[72px] sm:w-[72px]">
-                                            <img src="/assets/images/modern-saas/tracking-icon.svg" alt="" />
+                                            <Image width={200} height={200} src="/assets/images/modern-saas/tracking-icon.svg" alt="" />
                                         </div>
                                         <div className="flex-1">
                                             <h4 className="text-[22px] font-extrabold text-black dark:text-white">Advanced tracking</h4>
@@ -778,7 +498,7 @@ const ModernSaas = () => {
                                     </li>
                                     <li className="flex gap-5 sm:gap-8">
                                         <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-secondary p-2 sm:h-[72px] sm:w-[72px]">
-                                            <img src="assets/images/modern-saas/monitoring-icon.svg" alt="" />
+                                            <Image width={200} height={200} src="assets/images/modern-saas/monitoring-icon.svg" alt="" />
                                         </div>
                                         <div className="flex-1">
                                             <h4 className="text-[22px] font-extrabold text-black dark:text-white">In-depth monitoring</h4>
@@ -787,7 +507,7 @@ const ModernSaas = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <img
+                            <Image width={544} height={520}
                                 src="/assets/images/modern-saas/benifits-img.png"
                                 alt=""
                                 className="top-0 mx-auto mt-10 h-full ltr:-right-[125px] rtl:-left-[125px] lg:absolute lg:mt-0"
@@ -799,12 +519,12 @@ const ModernSaas = () => {
                 <section className="py-14 lg:py-20 bg-gradient-to-l from-blue-50">
                     <div className="container">
                         <div className="relative grid items-center gap-y-10 lg:grid-cols-2 lg:gap-4">
-                            <img
+                            <Image width={288} height={179}
                                 src="/assets/images/modern-saas/analysis-icon.svg"
                                 alt=""
                                 className="absolute top-0 block w-32 ltr:right-0 rtl:left-0 dark:hidden sm:w-72 lg:-top-16 lg:ltr:right-36 lg:rtl:left-36"
                             />
-                            <img
+                            <Image width={200} height={200}
                                 src="/assets/images/modern-saas/analysis-icon-dark.svg"
                                 alt=""
                                 className="absolute top-0 hidden w-32 ltr:right-0 rtl:left-0 dark:block sm:w-72 lg:-top-16 lg:ltr:right-36 lg:rtl:left-36"
@@ -814,11 +534,11 @@ const ModernSaas = () => {
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                             >
-                                <img src="/assets/images/modern-saas/integration-img.png" alt="" />
+                                <Image width={451} height={612} src="/assets/images/modern-saas/integrationLogo.png" alt="" />
                             </div>
                             <div className="heading mb-5 text-center ltr:lg:text-right rtl:lg:text-left">
                                 <h6 className="!text-secondary">INTEGRATIONS</h6>
-                                <h4 className="">Integrated with all tools you already know and love</h4>
+                                <h4 className="">Works with hundreds of banks worldwide.</h4>
                                 <p className="mt-4 text-lg font-semibold">
                                     Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy
                                     foster collaborative thinking
@@ -872,7 +592,7 @@ const ModernSaas = () => {
                                 </Link>
                             </div>
                             <div className="lg:ltr:pl-24 lg:rtl:pr-24">
-                                <img src="/assets/images/modern-saas/optimization.png" alt="" className="rounded-2xl" />
+                                <Image width={411} height={308} src="/assets/images/modern-saas/optimization.png" alt="" className="rounded-2xl" />
                             </div>
                         </div>
                         <div
@@ -901,7 +621,7 @@ const ModernSaas = () => {
                                 </Link>
                             </div>
                             <div className="lg:ltr:pl-24 lg:rtl:pr-24">
-                                <img src="/assets/images/modern-saas/migrate-modernize.png" alt="" className="rounded-2xl" />
+                                <Image width={411} height={308} src="/assets/images/modern-saas/migrate-modernize.png" alt="" className="rounded-2xl" />
                             </div>
                         </div>
                     </div>
@@ -916,7 +636,7 @@ const ModernSaas = () => {
                         <div className="grid gap-14 sm:grid-cols-2 lg:grid-cols-3">
                             <div data-aos="fade-up" data-aos-duration="1000">
                                 <div className="mb-10">
-                                    <img src="/assets/images/modern-saas/modern-design.svg" alt="" className="mx-auto w-24" />
+                                    <Image width={200} height={200} src="/assets/images/modern-saas/modern-design.svg" alt="" className="mx-auto w-24" />
                                 </div>
                                 <h4 className="text-[22px] font-extrabold text-black dark:text-white">Modern Design</h4>
                                 <p className="mt-6 mb-8 text-lg font-semibold line-clamp-4">
@@ -929,7 +649,7 @@ const ModernSaas = () => {
                             </div>
                             <div data-aos="fade-up" data-aos-duration="1000">
                                 <div className="mb-10">
-                                    <img src="/assets/images/modern-saas/magic-pagebuilder.svg" alt="" className="mx-auto w-24" />
+                                    <Image width={200} height={200} src="/assets/images/modern-saas/magic-pagebuilder.svg" alt="" className="mx-auto w-24" />
                                 </div>
                                 <h4 className="text-[22px] font-extrabold text-black dark:text-white">Magic Pagebuilder</h4>
                                 <p className="mt-6 mb-8 text-lg font-semibold line-clamp-4">
@@ -942,7 +662,7 @@ const ModernSaas = () => {
                             </div>
                             <div data-aos="fade-up" data-aos-duration="1000">
                                 <div className="mb-10">
-                                    <img src="/assets/images/modern-saas/support-icon.svg" alt="" className="mx-auto w-24" />
+                                    <Image width={200} height={200} src="/assets/images/modern-saas/support-icon.svg" alt="" className="mx-auto w-24" />
                                 </div>
                                 <h4 className="text-[22px] font-extrabold text-black dark:text-white">Support 24/7</h4>
                                 <p className="mt-6 mb-8 text-lg font-semibold line-clamp-4">
@@ -976,15 +696,15 @@ const ModernSaas = () => {
                 ></BlogSlider>
 
                 <section className="relative bg-black py-14 lg:py-24">
-                    <img src="/assets/images/modern-saas/newsletter.svg" alt="" className="absolute right-0 bottom-0 hidden xl:inline-block" />
-                    <img src="/assets/images/modern-saas/email.svg" alt="" className="absolute left-40 bottom-0 hidden md:left-1/2 xl:inline-block" />
+                    <Image width={349} height={361} src="/assets/images/modern-saas/newsletter.svg" alt="" className="absolute right-0 bottom-0 hidden xl:inline-block" />
+                    <Image width={102} height={67} src="/assets/images/modern-saas/email.svg" alt="" className="absolute left-40 bottom-0 hidden md:left-1/2 xl:inline-block" />
                     <div className="container">
                         <div className="flex flex-col justify-between gap-5 md:flex-row">
                             <div className="relative text-center md:w-1/2 ltr:md:text-left rtl:md:text-right xl:pr-12">
-                                <img src="/assets/images/modern-saas/icon-1.svg" alt="" className="absolute -left-12 -top-12" />
+                                <Image width={58} height={59} src="/assets/images/modern-saas/icon-1.svg" alt="" className="absolute -left-12 -top-12" />
                                 <h2 className="relative mb-3 text-3xl font-black text-white md:text-4xl xl:text-6xl">
                                     Email Newsletter
-                                    <img src="/assets/images/modern-saas/icon-2.svg" alt="" className="absolute right-8 -bottom-5" />
+                                    <Image width={50} height={50} src="/assets/images/modern-saas/icon-2.svg" alt="" className="absolute right-8 -bottom-5" />
                                 </h2>
                                 <p className="text-2xl font-semibold text-gray">get updates & more</p>
                                 <form className="relative mt-14">
@@ -1018,7 +738,7 @@ const ModernSaas = () => {
                                 </form>
                             </div>
                             <div data-aos={isRtl ? 'fade-right' : 'fade-left'} data-aos-duration="1000">
-                                <img src="/assets/images/modern-saas/oc-target.svg" alt="" className="mx-auto w-52 rtl:rotate-y-180 lg:w-80" />
+                                <Image width={320} height={251} src="/assets/images/modern-saas/oc-target.svg" alt="" className="mx-auto w-52 rtl:rotate-y-180 lg:w-80" />
                             </div>
                         </div>
                     </div>

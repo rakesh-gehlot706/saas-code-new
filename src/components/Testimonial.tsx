@@ -103,7 +103,7 @@ const Testimonial = ({
                                             <p className="font-medium italic text-white">{feedback.message}</p>
                                             <div className="relative mt-12">
                                                 <h5 className="font-extrabold text-primary">{feedback.name}</h5>
-                                                <h6 className="text-sm font-bold italic">{feedback.role}</h6>
+                                                <h6 className="text-sm font-bold italic ">{feedback.role}</h6>
                                                 <span className="absolute right-0 bottom-0">
                                                     <svg width="100" height="73" viewBox="0 0 100 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                         <g opacity="0.05">
